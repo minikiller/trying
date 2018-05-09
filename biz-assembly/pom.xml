@@ -155,7 +155,7 @@
                         <id>build-image</id>
                         <phase>install</phase>
                         <goals>
-                            <goal>build</goal>
+                            <!--<goal>build</goal>-->
                             <goal>deploy</goal>
                         </goals>
                     </execution>
