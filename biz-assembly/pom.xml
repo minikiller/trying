@@ -126,13 +126,14 @@
                     <installedFeatures>
                         <feature>wrapper</feature>
                     </installedFeatures>
-                    <!-- <startupFeatures/> -->
+                     <startupFeatures>
+                         <feature>fabric8-karaf-checks</feature>
+                     </startupFeatures>
                     <bootFeatures>
                         <!-- standard distribution -->
                         <feature>standard</feature>
                         <!-- minimal distribution -->
                         <feature>minimal</feature>
-                        <feature>fabric8-karaf-checks</feature>
                     </bootFeatures>
                     <bootBundles>
                         <bootBundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bootBundle>
