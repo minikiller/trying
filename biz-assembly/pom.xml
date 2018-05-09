@@ -129,11 +129,36 @@
                      <startupFeatures>
                          <feature>fabric8-karaf-checks</feature>
                      </startupFeatures>
+                    <!--<bootFeatures>-->
+                        <!--&lt;!&ndash; standard distribution &ndash;&gt;-->
+                        <!--<feature>standard</feature>-->
+                        <!--&lt;!&ndash; minimal distribution &ndash;&gt;-->
+                        <!--<feature>minimal</feature>-->
+                    <!--</bootFeatures>-->
                     <bootFeatures>
-                        <!-- standard distribution -->
-                        <feature>standard</feature>
-                        <!-- minimal distribution -->
-                        <feature>minimal</feature>
+                        <feature>wrap</feature>
+                        <feature>aries-blueprint</feature>
+                        <feature>shell</feature>
+                        <feature>shell-compat</feature>
+                        <feature>feature</feature>
+                        <feature>jaas</feature>
+                        <feature>ssh</feature>
+                        <feature>management</feature>
+                        <feature>bundle</feature>
+                        <feature>config</feature>
+                        <feature>deployer</feature>
+                        <feature>diagnostic</feature>
+                        <feature>feature</feature>
+                        <feature>instance</feature>
+                        <feature>kar</feature>
+                        <feature>log</feature>
+                        <feature>package</feature>
+                        <feature>service</feature>
+                        <feature>system</feature>
+                        <!--<feature>kalix-base</feature>-->
+                        <!--<feature>kalix-all</feature>-->
+                        <!--<feature>framework-all</feature>-->
+                        <!--<feature>admin-all</feature>-->
                     </bootFeatures>
                     <bootBundles>
                         <bootBundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bootBundle>
