@@ -17,9 +17,31 @@
 package com.kalix.fabric8;
 
 public class MyServiceImpl implements MyService {
+    private String serviceName;
+    private String url;
     
     public String echo(String message) {
-        return "Echo processed: " + message;
+        return this.serviceName + message;
     }
-    
+
+    public void init(){
+        System.out.println("kalix show data is "+this.serviceName);
+        System.out.println("kalix show url is "+this.url);
+    }
+
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }
