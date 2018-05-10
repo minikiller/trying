@@ -17,7 +17,7 @@
     <!--</cm:property-placeholder>-->
 
     <bean id="serviceBean" class="com.kalix.fabric8.MyServiceImpl" init-method="init">
-        <property name="serviceName" value="${env:MYSQL_SERVICE_USERNAME}"/>
+        <property name="serviceName" value="${k8s:map:myconfig/example.property.1}"/>
         <property name="url" value="jdbc:mysql://${env+service:MYSQL_SERVICE_NAME}/${env:MYSQL_SERVICE_DATABASE}"/>
     </bean>
 
