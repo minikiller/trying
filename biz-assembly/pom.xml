@@ -36,6 +36,7 @@
         <fabric8.version>3.0.11</fabric8.version>
         <fabric8.maven.plugin.version>3.5.38</fabric8.maven.plugin.version>
         <karaf.version>4.1.5</karaf.version>
+        <camel.version>2.21.1</camel.version>
         <!--<maven-install-plugin.version>2.5.2</maven-install-plugin.version>-->
     </properties>
 
@@ -73,6 +74,13 @@
             <groupId>io.fabric8</groupId>
             <artifactId>fabric8-karaf-features</artifactId>
             <version>${fabric8.version}</version>
+            <classifier>features</classifier>
+            <type>xml</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel.karaf</groupId>
+            <artifactId>apache-camel</artifactId>
+            <version>${camel.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
         </dependency>
@@ -127,6 +135,10 @@
                         <feature>wrapper</feature>
                     </installedFeatures>
                      <startupFeatures>
+                         <feature>aries-blueprint</feature>
+                         <feature>camel-blueprint</feature>
+                         <feature>webconsole</feature>
+                         <feature>fabric8-karaf-blueprint</feature>
                          <feature>fabric8-karaf-checks</feature>
                      </startupFeatures>
                     <!--<bootFeatures>-->
@@ -137,7 +149,7 @@
                     <!--</bootFeatures>-->
                     <bootFeatures>
                         <feature>wrap</feature>
-                        <feature>aries-blueprint</feature>
+                        <!--<feature>aries-blueprint</feature>-->
                         <feature>shell</feature>
                         <feature>shell-compat</feature>
                         <feature>feature</feature>
