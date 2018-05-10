@@ -17,7 +17,8 @@
 package com.kalix.fabric8;
 
 public class MyServiceImpl implements MyService {
-    private String serviceName;
+    private String serviceName; //configMap
+    private String secretValue;
     private String url;
     
     public String echo(String message) {
@@ -27,6 +28,7 @@ public class MyServiceImpl implements MyService {
     public void init(){
         System.out.println("kalix show data is "+this.serviceName);
         System.out.println("kalix show url is "+this.url);
+        System.out.println("kalix show secretValue is "+this.secretValue);
     }
 
     public String getServiceName() {
@@ -43,5 +45,13 @@ public class MyServiceImpl implements MyService {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getSecretValue() {
+        return secretValue;
+    }
+
+    public void setSecretValue(String secretValue) {
+        this.secretValue = secretValue;
     }
 }
