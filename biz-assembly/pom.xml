@@ -35,7 +35,7 @@
     <properties>
         <fabric8.version>3.0.11</fabric8.version>
         <fabric8.maven.plugin.version>3.5.38</fabric8.maven.plugin.version>
-        <karaf.version>4.1.5</karaf.version>
+        <karaf.version>4.2.0</karaf.version>
         <camel.version>2.21.1</camel.version>
         <!--<maven-install-plugin.version>2.5.2</maven-install-plugin.version>-->
     </properties>
