@@ -19,6 +19,16 @@
     </modules>
 
     <repositories>
+        <repository>
+            <id>remote-nexus</id>
+            <url>http://nexus.apps.bogon.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
         <!-- Apache ServiceMix repository (for region) -->
         <repository>
             <id>apache.servicemix.m2</id>
