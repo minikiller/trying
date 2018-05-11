@@ -15,6 +15,7 @@
         <module>biz-service</module>
         <module>biz-feature</module>
         <module>biz-assembly</module>
+        <module>biz-etc</module>
     </modules>
 
     <repositories>

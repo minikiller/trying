@@ -17,11 +17,26 @@
     limitations under the License.
 -->
 <features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    <feature name="postgresql-driver">
+        <bundle>mvn:org.postgresql/postgresql/${postgresql.version}</bundle>
+    </feature>
 
-    <feature name='${project.artifactId}' description='${project.name}' version='${project.version}'>
+    <feature name="biz-base">
+        <feature>transaction</feature>
+        <feature>jndi</feature>
+        <feature>jdbc</feature>
+        <feature>postgresql-driver</feature>
+        <feature>pax-jdbc-config</feature>
+        <feature>pax-jdbc-pool-dbcp2</feature>
+    </feature>
+
+    <feature name='biz-all' description='${project.name}'>
         <details>${project.description}</details>
-        <bundle>mvn:trying/com.kalix.fabric8/${project.version}</bundle>
-        <!-- <config>foo=bar</config> -->
+        <feature>biz-base</feature>
+        <bundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bundle>
+        <configfile finalname="/etc/org.ops4j.datasource-biz.cfg" override="true">
+            mvn:com.kalix.fabric8/biz-etc/${project.version}/cfg/org.ops4j.datasource-biz
+        </configfile>
     </feature>
 
 </features>
