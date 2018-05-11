@@ -22,7 +22,7 @@
 
     <feature name="fabric8-karaf-core" description="Fabric8 Karaf Core" version="3.0.11">
         <feature>scr</feature>
-        <!--<feature>aries-blueprint</feature>-->
+        <feature>aries-blueprint</feature>
         <feature>kubernetes-client</feature>
         <bundle dependency="true">mvn:commons-codec/commons-codec/1.10</bundle>
         <bundle dependency="true">mvn:org.apache.commons/commons-lang3/3.7</bundle>
