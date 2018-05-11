@@ -65,7 +65,7 @@
         <feature>transaction</feature>
         <feature>jndi</feature>
         <feature>jdbc</feature>
-        <feature version="2.4.1">jpa</feature>
+        <!--<feature version="2.4.1">jpa</feature>-->
         <feature>postgresql-driver</feature>
         <feature>pax-jdbc-config</feature>
         <feature>pax-jdbc-pool-dbcp2</feature>
