@@ -22,7 +22,7 @@
     </feature>
 
     <feature name="biz-base">
-        <feature>transaction</feature>
+        <!--<feature>transaction</feature>-->
         <feature>jndi</feature>
         <feature>jdbc</feature>
         <feature>postgresql-driver</feature>
