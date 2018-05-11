@@ -141,25 +141,25 @@
                     <installedFeatures>
                         <feature>wrapper</feature>
                     </installedFeatures>
-                     <startupFeatures>
-                         <feature>aries-blueprint</feature>
-                         <feature>camel-blueprint</feature>
-                         <feature>webconsole</feature>
-                         <!--<feature>fabric8-karaf-blueprint</feature>-->
-                         <feature>fabric8-karaf-core</feature>
-                         <feature>fabric8-karaf-blueprint</feature>
-                         <feature>fabric8-karaf-cm</feature>
-                         <feature>fabric8-karaf-checks</feature>
-                     </startupFeatures>
+                    <startupFeatures>
+                        <feature>eventadmin</feature>
+                        <feature>fabric8-karaf-core</feature>
+                        <feature>fabric8-karaf-blueprint</feature>
+                        <feature>fabric8-karaf-cm</feature>
+                        <feature>fabric8-karaf-checks</feature>
+                    </startupFeatures>
+                    <bootBundles>
+                        <bootBundle>mvn:org.apache.felix/org.apache.felix.prefs/1.1.0</bootBundle>
+                    </bootBundles>
                     <!--<bootFeatures>-->
-                        <!--&lt;!&ndash; standard distribution &ndash;&gt;-->
-                        <!--<feature>standard</feature>-->
-                        <!--&lt;!&ndash; minimal distribution &ndash;&gt;-->
-                        <!--<feature>minimal</feature>-->
+                    <!--&lt;!&ndash; standard distribution &ndash;&gt;-->
+                    <!--<feature>standard</feature>-->
+                    <!--&lt;!&ndash; minimal distribution &ndash;&gt;-->
+                    <!--<feature>minimal</feature>-->
                     <!--</bootFeatures>-->
                     <bootFeatures>
                         <feature>wrap</feature>
-                        <!--<feature>aries-blueprint</feature>-->
+                        <feature>aries-blueprint</feature>
                         <feature>shell</feature>
                         <feature>shell-compat</feature>
                         <feature>feature</feature>
@@ -177,7 +177,7 @@
                         <feature>package</feature>
                         <feature>service</feature>
                         <feature>system</feature>
-                        <!--<feature>biz-all</feature>-->
+                        <feature>biz-all</feature>
                         <!--<feature>kalix-base</feature>-->
                         <!--<feature>kalix-all</feature>-->
                         <!--<feature>framework-all</feature>-->
