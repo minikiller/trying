@@ -70,13 +70,13 @@
             <type>xml</type>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
-            <groupId>io.fabric8</groupId>
-            <artifactId>fabric8-karaf-features</artifactId>
-            <version>${fabric8.version}</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.fabric8</groupId>-->
+            <!--<artifactId>fabric8-karaf-features</artifactId>-->
+            <!--<version>${fabric8.version}</version>-->
+            <!--<classifier>features</classifier>-->
+            <!--<type>xml</type>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>apache-camel</artifactId>
