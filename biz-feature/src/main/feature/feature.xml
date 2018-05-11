@@ -62,7 +62,7 @@
         </conditional>
     </feature>
     <feature name="biz-base">
-        <feature>transaction</feature>
+        <feature>transaction-api</feature>
         <feature>jndi</feature>
         <feature>jdbc</feature>
         <feature version="2.4.1">jpa</feature>

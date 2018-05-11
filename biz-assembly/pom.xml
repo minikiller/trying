@@ -146,7 +146,7 @@
                     <startupFeatures>
                         <feature>eventadmin</feature>
                         <!--<feature>fabric8-karaf-core</feature>-->
-                        <!--<feature>fabric8-karaf-blueprint</feature>-->
+                        <feature>fabric8-karaf-blueprint</feature>
                         <!--<feature>fabric8-karaf-cm</feature>-->
                         <feature>fabric8-karaf-checks</feature>
                     </startupFeatures>
