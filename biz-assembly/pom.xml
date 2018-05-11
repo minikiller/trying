@@ -140,7 +140,7 @@
                 <configuration>
                     <installedFeatures>
                         <feature>wrapper</feature>
-                        <feature>aries-blueprint</feature>
+                        <!--<feature>aries-blueprint</feature>-->
                         <feature>shell-compat</feature>
                     </installedFeatures>
                     <startupFeatures>
@@ -155,6 +155,7 @@
                     </bootBundles>
                     <bootFeatures>
                         <feature>wrap</feature>
+                        <feature>aries-blueprint</feature>
                         <feature>shell</feature>
                         <feature>feature</feature>
                         <feature>jaas</feature>
