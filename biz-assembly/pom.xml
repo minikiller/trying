@@ -177,7 +177,7 @@
                         <feature>package</feature>
                         <feature>service</feature>
                         <feature>system</feature>
-                        <feature>biz-all</feature>
+                        <!--<feature>biz-all</feature>-->
                         <!--<feature>kalix-base</feature>-->
                         <!--<feature>kalix-all</feature>-->
                         <!--<feature>framework-all</feature>-->
