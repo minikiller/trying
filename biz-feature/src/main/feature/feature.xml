@@ -65,7 +65,7 @@
         <feature>transaction</feature>
         <feature>jndi</feature>
         <feature>jdbc</feature>
-        <!--<feature version="2.4.1">jpa</feature>-->
+        <feature version="2.4.1">jpa</feature>
         <feature>postgresql-driver</feature>
         <feature>pax-jdbc-config</feature>
         <feature>pax-jdbc-pool-dbcp2</feature>
@@ -74,7 +74,7 @@
     <feature name='biz-all' description='${project.name}'>
         <details>${project.description}</details>
         <feature>biz-base</feature>
-        <bundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bundle>
+        <!--<bundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bundle>-->
         <configfile finalname="/etc/org.ops4j.datasource-biz.cfg" override="true">
             mvn:com.kalix.fabric8/biz-etc/${project.version}/cfg/org.ops4j.datasource-biz
         </configfile>
