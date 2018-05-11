@@ -4,8 +4,8 @@ spec:
     spec:
       containers:
         - env:
-#          - name: JAVA_OPTIONS
-#            value: "-Dfabric8.k8s.secrets.api.enabled=true"
+          - name: JAVA_OPTIONS
+            value: "-Dfabric8.k8s.secrets.api.enabled=true"
           - name: MYSQL_SERVICE_NAME
             value: mysql
           - name: MYSQL_SERVICE_DATABASE
