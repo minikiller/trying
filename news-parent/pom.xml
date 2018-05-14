@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress ALL -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <parent>
+        <artifactId>trying</artifactId>
+        <groupId>com.kalix.fabric8</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.kalix.common.news</groupId>
+    <artifactId>news-parent</artifactId>
+    <name>Kalix Common News</name>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>common-news-entities</module>
+        <module>common-news-api</module>
+        <module>common-news-dao</module>
+        <module>common-news-biz</module>
+        <module>common-news-rest</module>
+        <module>common-news-extjs</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.kalix.common.news</groupId>
+                <artifactId>common-news-api</artifactId>
+                <version>${project.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.common.news</groupId>
+                <artifactId>common-news-entities</artifactId>
+                <version>${project.common.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.admin.audit</groupId>
+                <artifactId>admin-audit-biz</artifactId>
+                <version>${project.admin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

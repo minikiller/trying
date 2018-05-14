@@ -15,6 +15,8 @@
         <module>biz-service</module>
         <module>biz-feature</module>
         <module>biz-etc</module>
+        <module>redis-service</module>
+        <!--<module>news-parent</module>-->
         <module>biz-assembly</module>
     </modules>
 

@@ -46,7 +46,7 @@
     </feature>
 
     <feature name="postgresql-driver">
-        <bundle>mvn:org.postgresql/postgresql/${postgresql.version}</bundle>
+        <bundle>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</bundle>
     </feature>
     <feature name="openjpa" description="Apache OpenJPA 2.4.x persistence engine support" version="2.4.0.Release">
         <details>Enable Apache OpenJPA as persistence engine.</details>
@@ -88,6 +88,14 @@
             <bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.blueprint/2.5.0</bundle>
         </conditional>
     </feature>
+
+    <feature name="jedis">
+        <!--<bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/3.1_1</bundle>-->
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/${cglib.version}</bundle>
+        <bundle>mvn:org.apache.commons/commons-pool2/${commons-pool2.version}</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.jedis/${jedis.version}</bundle>
+    </feature>
+
     <feature name="biz-base">
         <feature>transaction</feature>
         <feature>jndi</feature>
@@ -101,7 +109,9 @@
     <feature name='biz-all' description='${project.name}'>
         <details>${project.description}</details>
         <feature>biz-base</feature>
+        <feature>jedis</feature>
         <bundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bundle>
+        <bundle>mvn:com.kalix.fabric8/redis-service/${project.version}</bundle>
         <configfile finalname="/etc/org.ops4j.datasource-biz.cfg" override="true">
             mvn:com.kalix.fabric8/biz-etc/${project.version}/cfg/org.ops4j.datasource-biz
         </configfile>
