@@ -59,7 +59,7 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Bundle-Version>${project.version}</Bundle-Version>
                         <Export-Package>
-                            com.kalix.fabric8*;version=${project.version}
+                            com.kalix.fabric8.redis*;version=${project.version}
                         </Export-Package>
                         <Import-Package>
                             *
