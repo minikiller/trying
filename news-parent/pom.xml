@@ -3,42 +3,62 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <parent>
-        <artifactId>trying</artifactId>
-        <groupId>com.kalix.fabric8</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>com.kalix</groupId>
+        <artifactId>kalix-parent</artifactId>
+        <version>1.0.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.kalix.common.news</groupId>
+    <groupId>com.kalix.trying.news</groupId>
     <artifactId>news-parent</artifactId>
-    <name>Kalix Common News</name>
+    <version>1.0.1-SNAPSHOT</version>
+    <name>Kalix Trying News</name>
     <packaging>pom</packaging>
 
+    <properties>
+        <project.trying.version>1.0.1-SNAPSHOT</project.trying.version>
+    </properties>
+
     <modules>
-        <module>common-news-entities</module>
-        <module>common-news-api</module>
-        <module>common-news-dao</module>
-        <module>common-news-biz</module>
-        <module>common-news-rest</module>
-        <module>common-news-extjs</module>
+        <module>trying-news-entities</module>
+        <module>trying-news-api</module>
+        <module>trying-news-dao</module>
+        <module>trying-news-biz</module>
+        <module>trying-news-rest</module>
     </modules>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kalix.framework.poms</groupId>
+            <artifactId>framework-poms-dm</artifactId>
+            <type>pom</type>
+            <version>${project.framework.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kalix.framework.core</groupId>
+            <artifactId>framework-core-api</artifactId>
+            <version>${project.framework.version}</version>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.kalix.common.news</groupId>
-                <artifactId>common-news-api</artifactId>
-                <version>${project.common.version}</version>
+                <groupId>com.kalix.trying.news</groupId>
+                <artifactId>trying-news-api</artifactId>
+                <version>${project.trying.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.kalix.common.news</groupId>
-                <artifactId>common-news-entities</artifactId>
-                <version>${project.common.version}</version>
+                <groupId>com.kalix.trying.news</groupId>
+                <artifactId>trying-news-entities</artifactId>
+                <version>${project.trying.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kalix.admin.audit</groupId>
                 <artifactId>admin-audit-biz</artifactId>
-                <version>${project.admin.version}</version>
+                <version>${project.trying.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
