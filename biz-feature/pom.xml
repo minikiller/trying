@@ -34,7 +34,7 @@
 
     <properties>
         <postgresql.version>9.4-1202-jdbc41</postgresql.version>
-        <jedis.version>2.9.0</jedis.version>
+        <jedis.version>2.9.0_1</jedis.version>
         <commons-pool2.version>2.4.2</commons-pool2.version>
     </properties>
 
