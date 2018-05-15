@@ -52,7 +52,7 @@ public class TestHTTPRequests extends APITest {
      * test for add new Entity method
      */
     @Test
-    public void test001POSTHttpRequest() {
+    public void test001_POST() {
         String uri = getValue("post.uri");
         String payload = loadFile("add.json");
         APIResponse response = APIRequest.POST(uri).header("Cookie", "JSESSIONID=" + token).type(MediaType.APPLICATION_JSON_TYPE).body(payload)
@@ -70,7 +70,7 @@ public class TestHTTPRequests extends APITest {
      * test for getAll method
      */
     @Test
-    public void test002GETALLHttpRequest() {
+    public void test002_GETALL() {
         String uri = getValue("getall.uri");
         APIResponse response = APIRequest.GET(uri).header("Cookie", "JSESSIONID=" + token).param("page", "1").param("limit", "10")
                 .invoke().assertStatus(200);
@@ -83,7 +83,7 @@ public class TestHTTPRequests extends APITest {
      * test for get a entity method
      */
     @Test
-    public void test003GETHttpRequest() {
+    public void test003_GET() {
         Assert.assertNotNull(id);
         String uri = String.format(getValue("get.uri"), id);
         APIResponse response = APIRequest.GET(uri).header("Cookie", "JSESSIONID=" + token)
@@ -97,7 +97,7 @@ public class TestHTTPRequests extends APITest {
      * test for update a entity method
      */
     @Test
-    public void test004PUTHttpRequest() {
+    public void test004_PUT() {
         Assert.assertNotNull(id);
         String uri = String.format(getValue("put.uri"), id);
         //format data
@@ -114,7 +114,7 @@ public class TestHTTPRequests extends APITest {
      * test for delete a entity method
      */
     @Test
-    public void test005DELETEHttpRequest() {
+    public void test005_DELETE() {
         String uri = String.format(getValue("delete.uri"), id);
         APIResponse response = APIRequest.DELETE(uri).header("Cookie", "JSESSIONID=" + token)
                 .invoke().assertStatus(200);
@@ -124,5 +124,4 @@ public class TestHTTPRequests extends APITest {
         succeed = jsonObject.getBoolean("success");
         Assert.assertTrue(succeed);
     }
-
 }
