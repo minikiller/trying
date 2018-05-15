@@ -10,6 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.trying.version>1.0.1-SNAPSHOT</project.trying.version>
     </properties>
     <modules>
         <module>biz-service</module>

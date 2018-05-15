@@ -41,6 +41,8 @@
             <artifactId>framework-core-api</artifactId>
             <version>${project.framework.version}</version>
         </dependency>
+
+
     </dependencies>
 
     <dependencyManagement>
@@ -59,6 +61,12 @@
                 <groupId>com.kalix.admin.audit</groupId>
                 <artifactId>admin-audit-biz</artifactId>
                 <version>${project.trying.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kalix.framework.core</groupId>
+                <artifactId>framework-core-restfultest</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

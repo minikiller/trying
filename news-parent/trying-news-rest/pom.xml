@@ -24,5 +24,9 @@
             <groupId>com.kalix.trying.news</groupId>
             <artifactId>trying-news-api</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kalix.framework.core</groupId>
+            <artifactId>framework-core-restfultest</artifactId>
+        </dependency>
     </dependencies>
 </project>

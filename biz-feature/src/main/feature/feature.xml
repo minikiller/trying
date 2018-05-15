@@ -48,6 +48,7 @@
     <feature name="postgresql-driver">
         <bundle>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</bundle>
     </feature>
+
     <feature name="openjpa" description="Apache OpenJPA 2.4.x persistence engine support" version="2.4.0.Release">
         <details>Enable Apache OpenJPA as persistence engine.</details>
         <feature>jndi</feature>
@@ -59,7 +60,8 @@
         <bundle dependency="true">mvn:commons-lang/commons-lang/2.6</bundle>
         <bundle dependency="true">mvn:commons-collections/commons-collections/3.2.2</bundle>
         <bundle dependency="true">mvn:commons-pool/commons-pool/1.6</bundle>
-        <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_3
+        <bundle dependency="true">
+            mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_3
         </bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.ant/1.7.0_6</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.serp/1.14.1_1</bundle>
@@ -115,6 +117,15 @@
         <configfile finalname="/etc/org.ops4j.datasource-biz.cfg" override="true">
             mvn:com.kalix.fabric8/biz-etc/${project.version}/cfg/org.ops4j.datasource-biz
         </configfile>
+    </feature>
+
+    <feature name="trying-news" version="${project.trying.version}">
+        <bundle>mvn:com.kalix.trying.news/trying-news-entities/${project.trying.version}</bundle>
+        <bundle>mvn:com.kalix.trying.news/trying-news-api/${project.trying.version}</bundle>
+        <bundle>mvn:com.kalix.trying.news/trying-news-dao/${project.trying.version}</bundle>
+        <bundle>mvn:com.kalix.trying.news/trying-news-biz/${project.trying.version}</bundle>
+        <bundle>mvn:com.kalix.trying.news/trying-news-rest/${project.trying.version}</bundle>
+        <!--<bundle>mvn:com.kalix.trying.news/trying-news-extjs/${project.trying.version}</bundle>-->
     </feature>
 
 </features>
