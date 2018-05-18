@@ -158,7 +158,7 @@
                         <!--<feature>fabric8-karaf-core</feature>-->
                         <!--<feature>fabric8-karaf-blueprint</feature>-->
                         <!--<feature>fabric8-karaf-cm</feature>-->
-                        <feature>fabric8-karaf-checks</feature>
+                        <!--<feature>fabric8-karaf-checks</feature>-->
                     </startupFeatures>
                     <bootBundles>
                         <bootBundle>mvn:org.apache.felix/org.apache.felix.prefs/1.1.0</bootBundle>
