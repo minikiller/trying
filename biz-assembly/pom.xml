@@ -92,14 +92,14 @@
             <classifier>features</classifier>
             <type>xml</type>
         </dependency>
-        <dependency>
-            <groupId>org.ops4j.pax.jdbc</groupId>
-            <artifactId>pax-jdbc-features</artifactId>
-            <version>1.2.0</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-            <scope>runtime</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.ops4j.pax.jdbc</groupId>-->
+            <!--<artifactId>pax-jdbc-features</artifactId>-->
+            <!--<version>1.2.0</version>-->
+            <!--<classifier>features</classifier>-->
+            <!--<type>xml</type>-->
+            <!--<scope>runtime</scope>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
@@ -154,6 +154,16 @@
                     </installedFeatures>
                     <startupFeatures>
                         <feature>eventadmin</feature>
+
+                        <!--<feature>fabric8-karaf-core</feature>-->
+                        <!--<feature>fabric8-karaf-blueprint</feature>-->
+                        <!--<feature>fabric8-karaf-cm</feature>-->
+                        <!--<feature>fabric8-karaf-checks</feature>-->
+                    </startupFeatures>
+                    <bootBundles>
+                        <bootBundle>mvn:org.apache.felix/org.apache.felix.prefs/1.1.0</bootBundle>
+                    </bootBundles>
+                    <bootFeatures>
                         <feature>wrap</feature>
                         <feature>aries-blueprint</feature>
                         <feature>shell</feature>
@@ -177,16 +187,6 @@
                         <feature>jdbc</feature>
                         <feature>pax-jdbc-config</feature>
                         <feature>pax-jdbc-pool-dbcp2</feature>
-                        <!--<feature>fabric8-karaf-core</feature>-->
-                        <!--<feature>fabric8-karaf-blueprint</feature>-->
-                        <!--<feature>fabric8-karaf-cm</feature>-->
-                        <!--<feature>fabric8-karaf-checks</feature>-->
-                    </startupFeatures>
-                    <bootBundles>
-                        <bootBundle>mvn:org.apache.felix/org.apache.felix.prefs/1.1.0</bootBundle>
-                    </bootBundles>
-                    <bootFeatures>
-
                         <!--<feature>biz-all</feature>-->
                         <!--<feature>kalix-base</feature>-->
                         <!--<feature>kalix-all</feature>-->
