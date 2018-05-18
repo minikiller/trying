@@ -38,6 +38,17 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>snapshot-nexus</id>
+            <url>http://nexus.apps.bogon.com/nexus/content/repositories/snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
         <!-- Apache ServiceMix repository (for region) -->
         <repository>
             <id>apache.servicemix.m2</id>
