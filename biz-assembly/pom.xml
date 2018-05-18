@@ -187,7 +187,9 @@
                         <feature>jdbc</feature>
                         <feature>pax-jdbc-config</feature>
                         <feature>pax-jdbc-pool-dbcp2</feature>
-                        <!--<feature>biz-all</feature>-->
+                        
+                        <feature>fabric8-karaf-checks</feature>
+                        <!--<feature>fabric8-karaf-checks</feature>-->
                         <!--<feature>kalix-base</feature>-->
                         <!--<feature>kalix-all</feature>-->
                         <!--<feature>framework-all</feature>-->
