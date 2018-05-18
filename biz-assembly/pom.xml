@@ -70,13 +70,13 @@
             <type>xml</type>
             <scope>runtime</scope>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>io.fabric8</groupId>-->
-            <!--<artifactId>fabric8-karaf-features</artifactId>-->
-            <!--<version>${fabric8.version}</version>-->
-            <!--<classifier>features</classifier>-->
-            <!--<type>xml</type>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>fabric8-karaf-features</artifactId>
+            <version>${fabric8.version}</version>
+            <classifier>features</classifier>
+            <type>xml</type>
+        </dependency>
         <dependency>
             <groupId>org.apache.camel.karaf</groupId>
             <artifactId>apache-camel</artifactId>
@@ -157,7 +157,7 @@
                         <!--<feature>fabric8-karaf-core</feature>-->
                         <!--<feature>fabric8-karaf-blueprint</feature>-->
                         <!--<feature>fabric8-karaf-cm</feature>-->
-                        <!--<feature>fabric8-karaf-checks</feature>-->
+                        <feature>fabric8-karaf-checks</feature>
                     </startupFeatures>
                     <bootBundles>
                         <bootBundle>mvn:org.apache.felix/org.apache.felix.prefs/1.1.0</bootBundle>
@@ -198,7 +198,7 @@
                     </bootBundles>
 
                     <librarys>
-                        <library>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</library>
+                        <!--library>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</library-->
                     </librarys>
                     <javase>1.8</javase>
                 </configuration>
