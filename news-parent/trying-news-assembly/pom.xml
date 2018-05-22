@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <groupId>com.kalix.trying.news</groupId>
-        <artifactId>news-parent</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
-    </parent>
+    <!--<parent>-->
+        <!--<groupId>com.kalix.trying.news</groupId>-->
+        <!--<artifactId>news-parent</artifactId>-->
+        <!--<version>1.0.1-SNAPSHOT</version>-->
+    <!--</parent>-->
 
     <!--
       Licensed to the Apache Software Foundation (ASF) under one or more
@@ -25,13 +25,23 @@
     -->
 
     <modelVersion>4.0.0</modelVersion>
-
+    <groupId>com.kalix.trying.news</groupId>
+    <!--<artifactId>news-parent</artifactId>-->
+    <version>1.0.1-SNAPSHOT</version>
     <artifactId>trying-news-assembly</artifactId>
     <packaging>karaf-assembly</packaging>
 
     <name>trying-news-assembly</name>
     <description>biz-assembly details</description>
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.trying.version>1.0.1-SNAPSHOT</project.trying.version>
+        <fabric8.version>3.0.11</fabric8.version>
+        <fabric8.maven.plugin.version>3.5.38</fabric8.maven.plugin.version>
+        <karaf.version>4.2.0</karaf.version>
+        <!--<camel.version>2.21.1</camel.version>-->
+        <camel.version>2.18.2</camel.version>
+    </properties>
 
 
     <dependencies>
@@ -79,13 +89,13 @@
             <classifier>features</classifier>
             <type>xml</type>
         </dependency>
-        <dependency>
-            <groupId>com.kalix.fabric8</groupId>
-            <artifactId>biz-feature</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <classifier>features</classifier>
-            <type>xml</type>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.kalix.fabric8</groupId>-->
+            <!--<artifactId>biz-feature</artifactId>-->
+            <!--<version>1.0-SNAPSHOT</version>-->
+            <!--<classifier>features</classifier>-->
+            <!--<type>xml</type>-->
+        <!--</dependency>-->
         <!--<dependency>-->
             <!--<groupId>org.ops4j.pax.jdbc</groupId>-->
             <!--<artifactId>pax-jdbc-features</artifactId>-->
@@ -178,16 +188,22 @@
                         <feature>system</feature>
                         <feature>biz-base</feature>
                         <feature>jedis</feature>
+                        <feature>camel-metrics</feature>
+                        <feature>camel-jackson</feature>
+                        <feature>camel-servlet</feature>
+                        <feature>camel-dozer</feature>
+                        <feature>camel-swagger-java</feature>
                         <feature>fabric8-karaf-checks</feature>
+                        <feature>kalix-base</feature>
                         <feature>trying-news</feature>
-                        <!--<feature>fabric8-karaf-checks</feature>-->
+                        <feature>fabric8-karaf-checks</feature>
                         <!--<feature>kalix-base</feature>-->
                         <!--<feature>kalix-all</feature>-->
                         <!--<feature>framework-all</feature>-->
                         <!--<feature>admin-all</feature>-->
                     </bootFeatures>
                     <bootBundles>
-                        <bootBundle>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</bootBundle>
+                        <!--<bootBundle>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</bootBundle>-->
                         <!--<bootBundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bootBundle>-->
                     </bootBundles>
 
