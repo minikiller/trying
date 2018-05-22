@@ -195,6 +195,7 @@
                         <feature>camel-swagger-java</feature>
                         <feature>fabric8-karaf-checks</feature>
                         <feature>couchdb</feature>
+                        <feature>shiro-core</feature>
                         <feature>kalix-base</feature>
                         <!--<feature>trying-news</feature>-->
                         <!--<feature>kalix-base</feature>-->
