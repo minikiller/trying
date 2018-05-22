@@ -25,6 +25,7 @@
         <module>trying-news-dao</module>
         <module>trying-news-biz</module>
         <module>trying-news-rest</module>
+        <module>trying-news-assembly</module>
     </modules>
 
 

@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>trying</artifactId>
-        <groupId>com.kalix.fabric8</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>com.kalix.trying.news</groupId>
+        <artifactId>news-parent</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <!--
@@ -26,11 +26,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>biz-assembly</artifactId>
+    <artifactId>trying-news-assembly</artifactId>
     <packaging>karaf-assembly</packaging>
 
-    <name>biz-assembly</name>
+    <name>trying-news-assembly</name>
     <description>biz-assembly details</description>
+
+
 
     <dependencies>
         <dependency>
@@ -174,13 +176,10 @@
                         <feature>package</feature>
                         <feature>service</feature>
                         <feature>system</feature>
-                        <feature>transaction</feature>
-                        <feature>jndi</feature>
-                        <feature>jdbc</feature>
-                        <feature>pax-jdbc-config</feature>
-                        <feature>pax-jdbc-pool-dbcp2</feature>
-
+                        <feature>biz-base</feature>
+                        <feature>jedis</feature>
                         <feature>fabric8-karaf-checks</feature>
+                        <feature>trying-news</feature>
                         <!--<feature>fabric8-karaf-checks</feature>-->
                         <!--<feature>kalix-base</feature>-->
                         <!--<feature>kalix-all</feature>-->

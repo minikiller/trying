@@ -24,5 +24,6 @@
     </bean>
     <camelContext id="newsCamel" xmlns="http://camel.apache.org/schema/blueprint">
         <routeBuilder ref="newsRoute"/>
+
     </camelContext>
 </blueprint>
