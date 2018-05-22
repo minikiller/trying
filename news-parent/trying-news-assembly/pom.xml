@@ -31,7 +31,7 @@
     <artifactId>trying-news-assembly</artifactId>
     <packaging>karaf-assembly</packaging>
 
-    <name>trying-news-assembly</name>
+    <name>Trying News Assembly</name>
     <description>biz-assembly details</description>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -90,9 +90,9 @@
             <type>xml</type>
         </dependency>
         <dependency>
-            <groupId>com.kalix.fabric8</groupId>
-            <artifactId>biz-feature</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.kalix.trying.news</groupId>
+            <artifactId>trying-news-feature</artifactId>
+            <version>${project.version}</version>
             <classifier>features</classifier>
             <type>xml</type>
         </dependency>
@@ -186,25 +186,15 @@
                         <feature>package</feature>
                         <feature>service</feature>
                         <feature>system</feature>
-                        <feature>biz-base</feature>
-                        <feature>jedis</feature>
-                        <feature>camel-metrics</feature>
-                        <feature>camel-jackson</feature>
-                        <feature>camel-servlet</feature>
-                        <feature>camel-dozer</feature>
-                        <feature>camel-swagger-java</feature>
-                        <feature>fabric8-karaf-checks</feature>
-                        <feature>couchdb</feature>
-                        <feature>shiro-core</feature>
                         <feature>kalix-base</feature>
                         <!--<feature>trying-news</feature>-->
-                        <!--<feature>kalix-base</feature>-->
+                        <feature>kalix-framework</feature>
                         <!--<feature>kalix-all</feature>-->
                         <!--<feature>framework-all</feature>-->
                         <!--<feature>admin-all</feature>-->
                     </bootFeatures>
                     <bootBundles>
-                        <bootBundle>mvn:com.google.code.gson/gson/2.4</bootBundle>
+                        <!--<bootBundle>mvn:com.google.code.gson/gson/2.4</bootBundle>-->
                         <!--<bootBundle>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</bootBundle>-->
                         <!--<bootBundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bootBundle>-->
                     </bootBundles>
