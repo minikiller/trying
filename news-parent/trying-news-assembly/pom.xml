@@ -194,9 +194,8 @@
                         <feature>camel-dozer</feature>
                         <feature>camel-swagger-java</feature>
                         <feature>fabric8-karaf-checks</feature>
-                        <feature>kalix-base</feature>
-                        <feature>trying-news</feature>
-                        <feature>fabric8-karaf-checks</feature>
+                        <!--<feature>kalix-base</feature>-->
+                        <!--<feature>trying-news</feature>-->
                         <!--<feature>kalix-base</feature>-->
                         <!--<feature>kalix-all</feature>-->
                         <!--<feature>framework-all</feature>-->
