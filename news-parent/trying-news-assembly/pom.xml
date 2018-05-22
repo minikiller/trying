@@ -203,6 +203,7 @@
                         <!--<feature>admin-all</feature>-->
                     </bootFeatures>
                     <bootBundles>
+                        <bootBundle>mvn:com.google.code.gson/gson/2.4</bootBundle>
                         <!--<bootBundle>mvn:org.postgresql/postgresql/9.4-1202-jdbc41</bootBundle>-->
                         <!--<bootBundle>mvn:com.kalix.fabric8/biz-service/${project.version}</bootBundle>-->
                     </bootBundles>
