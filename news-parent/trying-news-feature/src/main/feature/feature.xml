@@ -73,24 +73,24 @@
             osgi.service;effective:=active;objectClass=javax.persistence.spi.PersistenceProvider
         </capability>
     </feature>
-    <feature name="jpa" description="OSGi Persistence Container" version="2.4.1">
-        <details>JPA implementation provided by Apache Aries JPA 2.x. NB: this feature doesn't provide the JPA engine,
-            you have to install one by yourself (OpenJPA for instance)
-        </details>
-        <feature version="[1.1,2)">transaction-api</feature>
-        <feature version="2.4.0.Release">openjpa</feature>
-        <bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-jpa_2.0_spec/1.1</bundle>
-        <bundle dependency="true">mvn:org.apache.felix/org.apache.felix.coordinator/1.0.2</bundle>
-        <bundle dependency="true">mvn:org.osgi/org.osgi.service.jpa/1.0.0</bundle>
-        <bundle dependency="true">mvn:org.osgi/org.osgi.service.jdbc/1.0.0</bundle>
-        <bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.api/2.5.0</bundle>
-        <bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.container/2.5.0</bundle>
-        <bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.support/2.5.0</bundle>
-        <conditional>
-            <condition>aries-blueprint</condition>
-            <bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.blueprint/2.5.0</bundle>
-        </conditional>
-    </feature>
+    <!--<feature name="jpa" description="OSGi Persistence Container" version="2.4.1">-->
+    <!--<details>JPA implementation provided by Apache Aries JPA 2.x. NB: this feature doesn't provide the JPA engine,-->
+    <!--you have to install one by yourself (OpenJPA for instance)-->
+    <!--</details>-->
+    <!--<feature version="[1.1,2)">transaction-api</feature>-->
+    <!--<feature version="2.4.0.Release">openjpa</feature>-->
+    <!--<bundle dependency="true">mvn:org.apache.geronimo.specs/geronimo-jpa_2.0_spec/1.1</bundle>-->
+    <!--<bundle dependency="true">mvn:org.apache.felix/org.apache.felix.coordinator/1.0.2</bundle>-->
+    <!--<bundle dependency="true">mvn:org.osgi/org.osgi.service.jpa/1.0.0</bundle>-->
+    <!--<bundle dependency="true">mvn:org.osgi/org.osgi.service.jdbc/1.0.0</bundle>-->
+    <!--<bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.api/2.5.0</bundle>-->
+    <!--<bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.container/2.5.0</bundle>-->
+    <!--<bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.support/2.5.0</bundle>-->
+    <!--<conditional>-->
+    <!--<condition>aries-blueprint</condition>-->
+    <!--<bundle>mvn:org.apache.aries.jpa/org.apache.aries.jpa.blueprint/2.5.0</bundle>-->
+    <!--</conditional>-->
+    <!--</feature>-->
 
     <feature name="jedis">
         <!--<bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/3.1_1</bundle>-->
@@ -148,7 +148,9 @@
         <feature>webconsole</feature>
         <feature>jndi</feature>
         <feature>jdbc</feature>
-        <feature version="2.4.1">jpa</feature>
+        <feature>jpa</feature>
+        <feature version="2.4.0.Release">openjpa</feature>
+        <!--<feature version="2.4.1">jpa</feature>-->
         <feature>postgresql-driver</feature>
         <feature>pax-jdbc-config</feature>
         <feature>pax-jdbc-pool-dbcp2</feature>

@@ -5,17 +5,17 @@
              http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
              http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
     <!-- to setup camel servlet with OSGi HttpService -->
-    <reference id="httpService" interface="org.osgi.service.http.HttpService"/>
+    <!--<reference id="httpService" interface="org.osgi.service.http.HttpService"/>-->
 
-    <bean class="org.apache.camel.component.servlet.osgi.OsgiServletRegisterer"
-          init-method="register"
-          destroy-method="unregister">
-        <property name="alias" value="/camel/rest"/>
-        <property name="httpService" ref="httpService"/>
-        <property name="servlet" ref="camelServlet"/>
-    </bean>
+    <!--<bean class="org.apache.camel.component.servlet.osgi.OsgiServletRegisterer"-->
+    <!--init-method="register"-->
+    <!--destroy-method="unregister">-->
+    <!--<property name="alias" value="/camel/rest"/>-->
+    <!--<property name="httpService" ref="httpService"/>-->
+    <!--<property name="servlet" ref="camelServlet"/>-->
+    <!--</bean>-->
 
-    <bean id="camelServlet" class="org.apache.camel.component.servlet.CamelHttpTransportServlet"/>
+    <!--<bean id="camelServlet" class="org.apache.camel.component.servlet.CamelHttpTransportServlet"/>-->
 
     <reference id="newsService" interface="com.kalix.trying.news.api.biz.INewsBeanService"/>
 
